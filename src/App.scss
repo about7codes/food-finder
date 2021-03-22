@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Roboto Condensed", sans-serif;
 }
 
 body {
   background-color: #c5beb6;
-  background-image: -webkit-gradient(linear, left top, right top, from(#c5beb6), to(#c5beb6));
   background-image: linear-gradient(to right, #c5beb6, #c5beb6);
   margin: 0;
   padding: 0;
@@ -20,21 +19,13 @@ img {
 
 .kitchen {
   height: 93vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 500px) {
   .kitchen {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
   .error {
     margin-top: 50px;
@@ -43,22 +34,17 @@ img {
 
 .chef {
   height: 100px;
-  display: -ms-grid;
   display: grid;
   place-content: center;
 }
 
 .chef-hand {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   /*   width: 50%; */
 }
 
 .chef-hand input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   border: 0;
   outline: 0;
   height: 40px;
@@ -68,9 +54,7 @@ img {
 }
 
 .chef-hand button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   border: 0;
   outline: 0;
   height: 40px;
@@ -80,11 +64,8 @@ img {
 }
 
 .dishes {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(150px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  grid-auto-rows: minmax(-webkit-min-content, -webkit-max-content);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-auto-rows: minmax(min-content, max-content);
   gap: 10px;
   padding: 10px;
@@ -111,31 +92,22 @@ img {
 }
 
 .dish {
-  -webkit-animation: anipoof 1s;
-          animation: anipoof 1s;
-  -webkit-box-shadow: 0 0 0.5em 0.2em rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 0.5em 0.2em rgba(0, 0, 0, 0.05);
+  animation: anipoof 1s;
+  box-shadow: 0 0 0.5em 0.2em rgba(0, 0, 0, 0.05);
   border-radius: 3px;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .dish img {
   display: block;
   border-bottom: 1px dashed #fff;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 .dish:hover img {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .dish-detail {
@@ -161,7 +133,6 @@ img {
 .dish-video {
   text-decoration: none;
   color: #000;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -177,33 +148,18 @@ img {
   grid-column: 1/-1;
   text-align: center;
   font-size: 24px;
-  -webkit-animation: anipoof 0.5s;
-          animation: anipoof 0.5s;
+  animation: anipoof 0.5s;
 }
 
 /* Keyframes  */
-@-webkit-keyframes anipoof {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
+
 @keyframes anipoof {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
+    transform: translateY(-5px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
-/*# sourceMappingURL=App.css.map */
